@@ -502,6 +502,11 @@ body._lock {
   height: 150px !important;
 }
 
+.chartTwo {
+  width: 300px !important;
+  height: 270px !important;
+}
+
 .title {
   font-weight: 700;
   font-size: 16px;
@@ -666,14 +671,14 @@ body._lock {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: end;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }
 
 .cards-bottom__title {
-  padding: 20px 40px 0 20px;
+  padding: 20px 0px 0 20px;
 }
 
 .cards-bottom__header-list {
@@ -682,6 +687,13 @@ body._lock {
 
 .cards-bottom__header-list li:hover .cards-bottom__header-sublist {
   display: block;
+}
+
+@media (max-width: 425px) {
+  .cards-bottom__header-list {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
 }
 
 .cards-bottom__header-item {
@@ -700,6 +712,7 @@ body._lock {
 }
 
 .cards-bottom__header-sublink {
+  background-color: #4d5474;
   padding: 5px;
   font-family: "Open Sans";
   font-weight: 600;
@@ -731,6 +744,15 @@ body._lock {
   display: flex;
 }
 
+@media (max-width: 425px) {
+  .cards-bottom__columns {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .cards-bottom__subtitle {
   margin: 19px 0 19px 20px;
 }
@@ -747,6 +769,14 @@ body._lock {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media (max-width: 1060px) {
+  .bottom__body {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
 }
 
 @media (max-width: 425px) {
@@ -800,6 +830,74 @@ body._lock {
 
 .bottom__text {
   padding: 0 0 0 34px;
+}
+
+.bottom__schedule {
+  padding: 0 0 0 84px;
+  position: relative;
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 135%;
+  letter-spacing: 0.025em;
+  color: #ffffff;
+}
+
+@media (max-width: 425px) {
+  .bottom__schedule {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    padding: 50px;
+  }
+}
+
+.item1 {
+  position: absolute;
+  top: 20%;
+  left: 70%;
+}
+
+@media (max-width: 425px) {
+  .item1 {
+    top: 35%;
+    left: 60%;
+  }
+}
+
+.item2 {
+  position: absolute;
+  bottom: 20%;
+  right: 40%;
+}
+
+@media (max-width: 425px) {
+  .item2 {
+    bottom: 30%;
+    right: 50%;
+  }
+}
+
+#pieChart {
+  width: 206px !important;
+  height: 206px !important;
+}
+
+#chartTwo {
+  width: 294px !important;
+  height: 260px !important;
+}
+
+@media (max-width: 1060px) {
+  #chartTwo {
+    width: 500px !important;
+  }
+}
+
+@media (max-width: 425px) {
+  #chartTwo {
+    width: 294px !important;
+  }
 }
 
 .subtitle-bottomcard {

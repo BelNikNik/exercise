@@ -106,14 +106,56 @@ document.addEventListener('DOMContentLoaded', () => { // структура до
 							'rgba(38, 185, 255, 1)',
 							'rgba(45, 142, 255, 1)',
 						],
-
 					}
 				]
 			},
 			options: {
-				
 			} // дополнительные опции для графика в виде объекта, если не нужны - передаем пустой объект
 		}
 	);
-
 })
+
+const ChartTwo = new Chart(
+	document.getElementById('chartTwo'),
+	{
+		type: 'line',
+		data: {
+			datasets: [
+				{
+					label: '',
+					data: [0, 10],
+					borderColor: '#43E9FF',
+				}
+			],
+			lebels: ['1 квартал', '2 квартал'],
+		},
+		options: {
+		}
+	}
+);
+
+const pieChart = new Chart(
+	document.getElementById('pieChart'),
+	{
+		type: 'pie',
+		data: {
+			lebels: ['75%', '25%'],
+			datasets: [
+				{
+					label: '',
+					data: [25, 75],
+					backgroundColor: [
+						'#43E9FF',
+						'#656CFF'
+					],
+					borderColor: [
+						'#43E9FF',
+						'#656CFF'
+					],
+				}
+			]
+		},
+		options: {
+		}
+	}
+);
