@@ -1,0 +1,398 @@
+/*Обнуление*/
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,
+:active {
+	outline: none;
+}
+a:focus,
+a:active {
+	outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+
+input::-ms-clear {
+	display: none;
+}
+button {
+	cursor: pointer;
+}
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+ul li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: 400;
+}
+/*--------------------*/
+
+body {
+	@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic&display=swap");
+	@import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic&display=swap");
+}
+
+body._lock {
+	overflow: hidden;
+}
+
+.wrapper {
+	display: flex;
+	min-height: 100%;
+}
+.aside {
+	flex: 0 0 241px;
+	background: #1f2339;
+	position: relative;
+	z-index: 10;
+
+	@media (max-width: 768px) {
+		position: fixed;
+		top: 0;
+		left: -100%;
+		width: 241px;
+		height: 100%;
+		transition: all 0.3s ease 0s;
+
+		&._active {
+			left: 0;
+		}
+	}
+	// .aside__content
+
+	&__content {
+		font-family: "Open Sans";
+		font-size: 14px;
+		line-height: 135%;
+		font-weight: 400;
+	}
+
+	// .aside__body
+
+	&__body {
+		@media (max-width: 768px) {
+			padding: 50px 0 0 0px;
+		}
+	}
+
+	// .aside__items
+
+	&__items {
+		display: flex;
+		flex-direction: column;
+		padding: 31px 0px 76px 20px;
+	}
+
+	// .aside__item
+
+	&__item {
+		padding: 13px 0 13px 6px;
+	}
+
+	&__item-item {
+		&:not(:last-child) {
+			margin: 0 0 25px 0;
+		}
+	}
+
+	// .aside__link
+
+	&__link {
+		display: flex;
+		align-items: center;
+		align-items: center;
+		color: #ffffff;
+		padding: 0 0 0 8px;
+		img {
+			margin: 0 8px 0 0px;
+		}
+	}
+
+	&__icon {
+		fill: #ffffff;
+		margin: 0 8px 0 0;
+	}
+
+	&__link-item {
+		display: flex;
+		align-items: center;
+		align-items: center;
+		color: #ffffff;
+		padding: 0 0 0 8px;
+		img {
+			margin: 0 8px 0 0px;
+		}
+	}
+
+	// .aside__list
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		margin: 0 0 0 10px;
+		font-weight: 400;
+	}
+}
+
+.item-open {
+	background: radial-gradient(133.33% 2508.35% at -4.59% -10%, #32e6ff 0%, rgba(0, 255, 209, 0.81) 100%)
+			/* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+		#43e8ff;
+	border-radius: 10px;
+	width: 221px;
+	padding: 13px 0 13px 8px;
+	margin: 0;
+}
+
+.link-open {
+	color: #23273a;
+}
+
+.link-main {
+	font-weight: 600;
+	color: #ffffff;
+}
+
+// основной контент ----------------------/
+
+.main {
+	flex: 1 1 auto;
+	background: #4d5474;
+	// .main__container
+
+	&__container {
+	}
+
+	// .main__header
+
+	&__header {
+	}
+
+	// .main__body
+
+	&__body {
+	}
+}
+
+// ._container
+
+._container {
+	max-width: 1110px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.header-main {
+	// .header-main__body
+
+	// .menu-icon /*---меню-бургер---*/
+	&__menu-icon {
+		display: none;
+	}
+	@media (max-width: 768px) {
+		&__menu-icon {
+			display: block;
+			z-index: 10;
+			position: relative;
+			top: 20px;
+			left: 0%;
+			width: 30px;
+			height: 18px;
+			cursor: pointer;
+		}
+		&__menu-icon span,
+		&__menu-icon::before,
+		&__menu-icon::after {
+			left: 0;
+			position: absolute;
+			height: 10%;
+			width: 100%;
+			transition: all 0.3s ease 0s;
+			background-color: #ffffff;
+		}
+		&__menu-icon::before,
+		&__menu-icon::after {
+			content: "";
+		}
+		&__menu-icon::before {
+			top: 0;
+		}
+		&__menu-icon::after {
+			width: 100%;
+			bottom: 0;
+		}
+		&__menu-icon span {
+			top: 50%;
+			width: 100%;
+			transform: scale(1) translate(0px, -50%);
+		}
+		&__menu-icon._active span {
+			transform: scale(0) translate(0px, -50%);
+		}
+		&__menu-icon._active::before {
+			top: 50%;
+			transform: rotate(-45deg) translate(0px, -50%);
+		}
+		&__menu-icon._active::after {
+			width: 100%;
+			bottom: 50%;
+			transform: rotate(45deg) translate(0px, 50%);
+		}
+	}
+
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 55px auto 49px;
+	}
+
+	&__title {
+		font-family: "Open Sans";
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 136%;
+		color: #ffffff;
+	}
+
+	// .header-main__buttons
+
+	&__buttons {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		font-family: "Open Sans";
+	}
+
+	&__search {
+		position: relative;
+		&:not(:last-child) {
+			margin: 0 26px 0 0;
+		}
+		input {
+			background-color: #3e4459;
+			border-radius: 5px;
+			width: 465px;
+			font-weight: 300;
+			font-size: 14px;
+			line-height: 136%;
+			color: #c4c4c4;
+			padding: 8px 0 9px 16px;
+		}
+	}
+
+	&__search-icon {
+		position: absolute;
+		display: flex;
+		align-items: center;
+		top: 0;
+		bottom: 0;
+		right: 14px;
+		cursor: pointer;
+	}
+
+	&__btn-search {
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 138%;
+		color: #23273a;
+		padding: 7px 30px;
+		background-color: #ffffff;
+		border-radius: 6px;
+		&:not(:last-child) {
+			margin: 0 23px 0 0;
+		}
+	}
+
+	// .header-main__btn-add
+
+	&__btn-add {
+		width: 32px;
+		height: 32px;
+		&:not(:last-child) {
+			margin: 0 23px 0 0;
+		}
+	}
+	// .header-main__btn-settings
+
+	&__btn-settings {
+		width: 32px;
+		height: 32px;
+	}
+}
+
+.btn-add,
+.btn-settings {
+	color: #ffffff;
+}
+
+//-----------ПЛИТКИ------------//
+
+.main {
+	&__body {
+		font-family: "Open Sans";
+		margin: 0 0 80px 0;
+	}
+
+	&__content {
+		background: #383e57;
+		box-shadow: 7px 7px 8px rgba(0, 0, 0, 0.15);
+		border-radius: 18px;
+		max-width: 1080px;
+		min-height: 789px;
+	}
+}
+

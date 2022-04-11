@@ -115,31 +115,14 @@ document.addEventListener('DOMContentLoaded', () => { // структура до
 	);
 })
 
-const ChartTwo = new Chart(
-	document.getElementById('chartTwo'),
-	{
-		type: 'line',
-		data: {
-			datasets: [
-				{
-					label: '',
-					data: [0, 10],
-					borderColor: '#43E9FF',
-				}
-			],
-			lebels: ['1 квартал', '2 квартал'],
-		},
-		options: {
-		}
-	}
-);
+
 
 const pieChart = new Chart(
 	document.getElementById('pieChart'),
 	{
 		type: 'pie',
 		data: {
-			lebels: ['75%', '25%'],
+			//labels: ['75%', '25%'],
 			datasets: [
 				{
 					label: '',
@@ -154,6 +137,26 @@ const pieChart = new Chart(
 					],
 				}
 			]
+		},
+		options: {
+		}
+	}
+);
+
+const ChartTwo = new Chart(
+	document.getElementById('chartTwo'),
+	{
+		type: 'line',
+		data: {
+			labels: ['', '', '', '', '', '', '', '', '', ''],
+			datasets: [
+				{
+					label: '',
+					data: [0, 5, 2, 6, 1, 8, 3, 7, 0, 10],
+					borderColor: '#43E9FF',
+					borderWidth: 1,
+				}
+			],
 		},
 		options: {
 		}

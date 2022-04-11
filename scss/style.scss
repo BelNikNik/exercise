@@ -260,7 +260,7 @@ body._lock {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		margin: 55px 0 49px 0;
+		margin: 55px auto 49px;
 	}
 
 	// .header-main__search
@@ -306,7 +306,9 @@ body._lock {
 //-----------ПЛИТКИ------------//
 
 .main__body {
-	margin: 0 0 68px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	font-family: "Open Sans";
 }
 
@@ -317,6 +319,7 @@ body._lock {
 	grid-template-columns: repeat(3, 340px);
 	grid-template-rows: repeat(2, 230px);
 	gap: 30px;
+	margin: 0 auto;
 
 	@media (max-width: 1060px) {
 		grid-template-columns: repeat(2, 340px);
@@ -554,6 +557,7 @@ body._lock {
 
 //---Нижняя-часть-главной-страницы-контента---//
 
+
 .cards-bottom {
 	display: grid;
 	grid-template-columns: repeat(2, 525px);
@@ -666,6 +670,9 @@ body._lock {
 			flex-direction: column;
 		}
 	}
+	&__column-schedule {
+		align-self: center;
+	}
 	&__subtitle {
 		margin: 19px 0 19px 20px;
 	}
@@ -678,7 +685,7 @@ body._lock {
 }
 
 //--Нижняя-часть-карточки-снизу---//
-
+//--Карточка-с-графиком-pieChart---//
 .bottom {
 	&__body {
 		display: flex;
