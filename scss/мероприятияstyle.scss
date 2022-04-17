@@ -461,10 +461,10 @@ body._lock {
 //--Карточка-организации---//
 
 .block-card {
-	
 	&__body {
 		position: relative;
 		z-index: 5;
+		
 	}
 
 	&__header {
@@ -479,7 +479,26 @@ body._lock {
 	}
 
 	&__icon {
+		height: 15px;
 		color: #ffffff;
+		cursor: pointer;
+		transition: all 0.3s ease-in-out;
+	}
+
+	&__icon.active {
+		transform: rotate(180deg);
+	}
+
+	&__icon_copy {
+		display: none;
+		transition: all 0.3s ease-in-out;
+	}
+
+	&__icon_copy.active {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		margin: -20px 0 0 0;
 	}
 
 	// .block-card__staffer
@@ -557,9 +576,14 @@ body._lock {
 	}
 
 	&__sublist {
+		max-height: 0;
+		transition: all 0.2s ease-in-out;
+		overflow: hidden;
+	}
+
+	&__sublist.active {
 		margin: 32px 0 0 0;
-		//position: absolute;
-		
+		max-height: 100%;
 	}
 
 	&__sublist-title {
@@ -595,9 +619,247 @@ body._lock {
 	color: #ffffff;
 }
 
+.title2 {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 136%;
+	color: #ffffff;
+}
+
 .subtitle {
 	font-weight: 300;
 	font-size: 12px;
 	line-height: 133%;
 	color: #ff8991;
+}
+
+//------Блок-формирования--------//
+
+.checking-card {
+	// .checking-card__body
+
+	&__body {
+		padding: 19px 22px 19px 27px;
+	}
+
+	// .checking-card__item
+
+	&__item {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		&:not(:last-child) {
+			margin: 0 0 10px 0;
+		}
+	}
+
+	// .checking-card__title
+
+	&__title {
+	}
+
+	// .checking-card__btn
+
+	&__btn {
+		width: 183px;
+		height: 36px;
+	}
+}
+
+hr {
+	border: 1px solid #ffffff;
+}
+
+.hr1 {
+	width: 136px;
+}
+
+.hr2 {
+	width: 171px;
+}
+
+.hr3 {
+	width: 152px;
+}
+
+.button {
+	background: #23273a;
+	border-radius: 6px;
+	color: #43e8ff;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 138%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+//---------Форма----------//
+
+.form-card {
+	// .form-card__body
+
+	// .form-card__search
+
+	&__search {
+		border-bottom: 1px solid #151e41;
+	}
+
+	// .form-card__title
+
+	&__title {
+		margin: 25px 0 6px 29px;
+	}
+
+	// .form-card__input-search
+
+	&__input_search {
+		width: 466px;
+		height: 56px;
+		margin: 0 0 30px 29px;
+		padding: 0 0 30px 10px;
+	}
+
+	// .form-card__organization
+
+	&__organization {
+		padding: 26px 0 29px 19px;
+	}
+
+	// .form-card__name
+
+	&__name {
+		margin: 0 0 6px 0;
+	}
+
+	// .form-card__input-name
+
+	&__input_name {
+		width: 465px;
+		height: 32px;
+		padding: 0 0 0 11px;
+	}
+
+	// .form-card__checkingType
+
+	&__checkingType {
+		margin: 0 0 6px 0;
+	}
+
+	// .form-card__select-checking
+
+	&__select_checking {
+		width: 303px;
+		height: 32px;
+		padding: 0 13px 0 11px;
+		-webkit-appearance: none;
+		background: #3e4459 url(../img/main/arrowGrey.svg) no-repeat right;
+		background-position-x: calc(100% - 13px);
+		border-radius: 5px;
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 136%;
+		color: #c4c4c4;
+		cursor: pointer;
+		margin: 0 0 17px 0;
+	}
+
+	// .form-card__verificationCheck
+
+	&__verificationCheck {
+		margin: 0 0 6px 0;
+	}
+
+	// .form-card__select-form
+
+	&__select_form {
+		width: 303px;
+		height: 32px;
+		padding: 0 13px 0 11px;
+		-webkit-appearance: none;
+		background: #3e4459 url(../img/main/arrowGrey.svg) no-repeat right;
+		background-position-x: calc(100% - 13px);
+		border-radius: 5px;
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 136%;
+		color: #c4c4c4;
+		cursor: pointer;
+		margin: 0 0 17px 0;
+	}
+
+	// .form-card__verificationMethod
+
+	&__verificationMethod {
+		margin: 0 0 6px 0;
+	}
+
+	// .form-card__select-method
+
+	&__select_method {
+		width: 303px;
+		height: 32px;
+		padding: 0 13px 0 11px;
+		-webkit-appearance: none;
+		background: #3e4459 url(../img/main/arrowGrey.svg) no-repeat right;
+		background-position-x: calc(100% - 13px);
+		border-radius: 5px;
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 136%;
+		color: #c4c4c4;
+		cursor: pointer;
+		margin: 0 0 17px 0;
+	}
+
+	// .form-card__verificationDate
+
+	&__verificationDate {
+		margin: 0 0 6px 0;
+	}
+
+	// .form-card__input-date
+
+	&__input_date {
+		width: 194px;
+		height: 32px;
+		padding: 0 20px 0;
+		margin: 0 0 17px 0;
+	}
+
+	&__verificationPlace {
+		margin: 0 0 6px 0;
+	}
+
+	// .form-card__input-address
+
+	&__input_address {
+		width: 465px;
+		height: 32px;
+		padding: 0 0 0 11px;
+	}
+
+	// .form-card__button
+
+	&__button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	// .form-card__btn
+
+	&__btn {
+		width: 138px;
+		height: 36px;
+	}
+}
+
+.input {
+	background: #3e4459;
+	border-radius: 5px;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 136%;
+	color: #c4c4c4;
 }

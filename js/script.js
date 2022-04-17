@@ -51,11 +51,23 @@ if (isMobile.any()) {
 // Меню бургер
 const iconMenu = document.querySelector('.header-main__menu-icon');
 const menuBody = document.querySelector('.aside');
+
 if (iconMenu) {
 	iconMenu.addEventListener("click", function (e) {
 		document.body.classList.toggle('_lock')
 		iconMenu.classList.toggle('_active');
 		menuBody.classList.toggle('_active');
+	});
+}
+
+const iconBtn = document.querySelector('.block-card__icon');
+const subList = document.querySelector('.block-card__sublist');
+const copyFile = document.querySelector('.block-card__icon_copy');
+if (iconBtn) {
+	iconBtn.addEventListener("click", function(e) {
+		iconBtn.classList.toggle('active');
+		subList.classList.toggle('active');
+		copyFile.classList.toggle('active');
 	});
 }
 
@@ -162,3 +174,8 @@ const ChartTwo = new Chart(
 		}
 	}
 );
+
+
+
+
+
