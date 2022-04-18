@@ -462,8 +462,8 @@ body._lock {
   .cards {
     -ms-grid-columns: 525px;
         grid-template-columns: 525px;
-    -ms-grid-rows: 857px 166px 665px;
-        grid-template-rows: 857px 166px 665px;
+    -ms-grid-rows: auto 166px 665px;
+        grid-template-rows: auto 166px 665px;
   }
 }
 
@@ -526,6 +526,9 @@ body._lock {
 
 .cards__block {
   padding: 25px 20px;
+}
+
+.cards__block:not(:last-child) {
   border-bottom: 1px solid #151e41;
 }
 

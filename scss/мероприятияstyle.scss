@@ -413,7 +413,7 @@ body._lock {
 	gap: 25px;
 	@media (max-width: 425px) {
 		grid-template-columns: 525px;
-		grid-template-rows: 857px 166px 665px;
+		grid-template-rows: auto 166px 665px;
 	}
 	&__structure {
 		background: #383e57;
@@ -454,7 +454,9 @@ body._lock {
 	}
 	&__block {
 		padding: 25px 20px;
-		border-bottom: 1px solid #151e41;
+		&:not(:last-child) {
+			border-bottom: 1px solid #151e41;
+		}
 	}
 }
 
