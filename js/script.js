@@ -60,17 +60,40 @@ if (iconMenu) {
 	});
 }
 
+// Выпадающее меню из блока Структура предприятия
+
 const iconBtn = document.querySelector('.block-card__icon');
 const subList = document.querySelector('.block-card__sublist');
 const copyFile = document.querySelector('.block-card__icon_copy');
 if (iconBtn) {
-	iconBtn.addEventListener("click", function(e) {
+	iconBtn.addEventListener("click", function (e) {
 		iconBtn.classList.toggle('active');
 		subList.classList.toggle('active');
 		copyFile.classList.toggle('active');
 	});
 }
 
+const iconBtn1 = document.querySelector('.block-card__icon1');
+const subList1 = document.querySelector('.block-card__sublist1');
+const copyFile1 = document.querySelector('.block-card__icon_copy1');
+if (iconBtn1) {
+	iconBtn1.addEventListener("click", function (e) {
+		iconBtn1.classList.toggle('open');
+		subList1.classList.toggle('open');
+		copyFile1.classList.toggle('open');
+	});
+}
+
+const iconBtn2 = document.querySelector('.block-card__icon2');
+const subList2 = document.querySelector('.block-card__sublist2');
+const copyFile2 = document.querySelector('.block-card__icon_copy2');
+if (iconBtn2) {
+	iconBtn2.addEventListener("click", function (e) {
+		iconBtn2.classList.toggle('actived');
+		subList2.classList.toggle('actived');
+		copyFile2.classList.toggle('actived');
+	});
+}
 
 // Прокрутка при клике
 const menuLinks = document.querySelectorAll('.menu__link[data-goto]');

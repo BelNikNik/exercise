@@ -409,7 +409,7 @@ body._lock {
 .cards {
 	display: grid;
 	grid-template-columns: repeat(2, 525px);
-	grid-template-rows: 166px 665px;
+	grid-template-rows: 166px auto;
 	gap: 25px;
 	@media (max-width: 425px) {
 		grid-template-columns: 525px;
@@ -480,23 +480,31 @@ body._lock {
 		margin: 0 0 21px 0;
 	}
 
-	&__icon {
+	&__icon,
+	&__icon1,
+	&__icon2 {
 		height: 15px;
 		color: #ffffff;
 		cursor: pointer;
 		transition: all 0.3s ease-in-out;
 	}
 
-	&__icon.active {
+	&__icon.active,
+	&__icon1.open,
+	&__icon2.actived {
 		transform: rotate(180deg);
 	}
 
-	&__icon_copy {
+	&__icon_copy,
+	&__icon_copy1,
+	&__icon_copy2 {
 		display: none;
 		transition: all 0.3s ease-in-out;
 	}
 
-	&__icon_copy.active {
+	&__icon_copy.active,
+	&__icon_copy1.open,
+	&__icon_copy2.actived {
 		display: flex;
 		justify-content: flex-end;
 		align-items: center;
@@ -577,13 +585,17 @@ body._lock {
 		}
 	}
 
-	&__sublist {
+	&__sublist,
+	&__sublist1,
+	&__sublist2 {
 		max-height: 0;
 		transition: all 0.2s ease-in-out;
 		overflow: hidden;
 	}
 
-	&__sublist.active {
+	&__sublist.active,
+	&__sublist1.open,
+	&__sublist2.actived {
 		margin: 32px 0 0 0;
 		max-height: 100%;
 	}
@@ -847,6 +859,7 @@ hr {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		padding: 0 0 24px 0;
 	}
 
 	// .form-card__btn

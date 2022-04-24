@@ -453,8 +453,8 @@ body._lock {
   display: grid;
   -ms-grid-columns: (525px)[2];
       grid-template-columns: repeat(2, 525px);
-  -ms-grid-rows: 166px 665px;
-      grid-template-rows: 166px 665px;
+  -ms-grid-rows: 166px auto;
+      grid-template-rows: 166px auto;
   gap: 25px;
 }
 
@@ -550,7 +550,7 @@ body._lock {
   margin: 0 0 21px 0;
 }
 
-.block-card__icon {
+.block-card__icon, .block-card__icon1, .block-card__icon2 {
   height: 15px;
   color: #ffffff;
   cursor: pointer;
@@ -559,20 +559,20 @@ body._lock {
   transition: all 0.3s ease-in-out;
 }
 
-.block-card__icon.active {
+.block-card__icon.active, .block-card__icon1.open, .block-card__icon2.actived {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 
-.block-card__icon_copy {
+.block-card__icon_copy, .block-card__icon_copy1, .block-card__icon_copy2 {
   display: none;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
-.block-card__icon_copy.active {
+.block-card__icon_copy.active, .block-card__icon_copy1.open, .block-card__icon_copy2.actived {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -645,7 +645,7 @@ body._lock {
   margin: 0 7px 0 0;
 }
 
-.block-card__sublist {
+.block-card__sublist, .block-card__sublist1, .block-card__sublist2 {
   max-height: 0;
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
@@ -653,7 +653,7 @@ body._lock {
   overflow: hidden;
 }
 
-.block-card__sublist.active {
+.block-card__sublist.active, .block-card__sublist1.open, .block-card__sublist2.actived {
   margin: 32px 0 0 0;
   max-height: 100%;
 }
@@ -888,6 +888,7 @@ hr {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0 0 24px 0;
 }
 
 .form-card__btn {
