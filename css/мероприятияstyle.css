@@ -460,8 +460,8 @@ body._lock {
 
 @media (max-width: 425px) {
   .cards {
-    -ms-grid-columns: 525px;
-        grid-template-columns: 525px;
+    -ms-grid-columns: (minmax(320px, 525px))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(320px, 525px));
     -ms-grid-rows: auto 166px 665px;
         grid-template-rows: auto 166px 665px;
   }
@@ -783,6 +783,12 @@ hr {
   padding: 0 0 30px 10px;
 }
 
+@media (max-width: 425px) {
+  .form-card__input_search {
+    width: 303px;
+  }
+}
+
 .form-card__organization {
   padding: 26px 0 29px 19px;
 }
@@ -795,6 +801,12 @@ hr {
   width: 465px;
   height: 32px;
   padding: 0 0 0 11px;
+}
+
+@media (max-width: 425px) {
+  .form-card__input_name {
+    width: 303px;
+  }
 }
 
 .form-card__checkingType {
@@ -876,6 +888,12 @@ hr {
   width: 465px;
   height: 32px;
   padding: 0 0 0 11px;
+}
+
+@media (max-width: 425px) {
+  .form-card__input_address {
+    width: 303px;
+  }
 }
 
 .form-card__button {

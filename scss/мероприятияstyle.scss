@@ -412,7 +412,7 @@ body._lock {
 	grid-template-rows: 166px auto;
 	gap: 25px;
 	@media (max-width: 425px) {
-		grid-template-columns: 525px;
+		grid-template-columns: repeat(auto-fill,minmax(320px, 525px));
 		grid-template-rows: auto 166px 665px;
 	}
 	&__structure {
@@ -732,6 +732,9 @@ hr {
 		height: 56px;
 		margin: 0 0 30px 29px;
 		padding: 0 0 30px 10px;
+		@media (max-width: 425px) {
+			width: 303px;
+		}
 	}
 
 	// .form-card__organization
@@ -752,6 +755,9 @@ hr {
 		width: 465px;
 		height: 32px;
 		padding: 0 0 0 11px;
+		@media (max-width: 425px) {
+			width: 303px;
+		}
 	}
 
 	// .form-card__checkingType
@@ -851,6 +857,9 @@ hr {
 		width: 465px;
 		height: 32px;
 		padding: 0 0 0 11px;
+		@media (max-width: 425px) {
+			width: 303px;
+		}
 	}
 
 	// .form-card__button

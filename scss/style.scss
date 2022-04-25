@@ -399,6 +399,9 @@ body._lock {
 		margin: 20px 0 0 10px;
 		border-collapse: collapse;
 		border: 2px solid #383e57;
+		@media (max-width: 425px) {
+			font-size: 10px;
+		}
 		thead {
 			th {
 				text-align: left;
@@ -420,6 +423,9 @@ body._lock {
 	&__schedule {
 		//график
 		position: relative;
+		@media (max-width: 425px) {
+			margin: 50px 0 0 0;
+		}
 	}
 
 	// .cards-top__list

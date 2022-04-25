@@ -429,6 +429,12 @@ body._lock {
   }
 }
 
+@media (max-width: 580px) {
+  .header-main__search input {
+    width: 400px;
+  }
+}
+
 .header-main__search-icon {
   position: absolute;
   display: -webkit-box;
@@ -548,7 +554,7 @@ body._lock {
 }
 
 .main__table thead th {
-  text-align: center;
+  text-align: left;
   padding: 0px 0px 10px 10px;
   border-bottom: 1px solid #151e41;
   color: #ffffff;

@@ -360,6 +360,9 @@ body._lock {
 			@media (max-width: 768px) {
 				width: 365px;
 			}
+			@media (max-width: 580px) {
+				width: 400px;
+			}
 		}
 	}
 
@@ -464,7 +467,7 @@ body._lock {
 		border: 2px solid #383e57;
 		thead {
 			th {
-				text-align: center;
+				text-align: left;
 				padding: 0px 0px 10px 10px;
 				border-bottom: 1px solid #151e41;
 				color: #ffffff;
